@@ -93,6 +93,13 @@ function reorderTasks(from, to) {
   saveTasks();
   renderTasks(currentFilter);
 }
+const clearCompletedBtn = document.getElementById("clear-completed");
+
+clearCompletedBtn.addEventListener("click", () => {
+  tasks = tasks.filter(task => !task.completed);
+  saveTasks();
+  renderTasks(currentFilter);
+});
 
 // Initial render
 renderTasks(currentFilter);
