@@ -170,3 +170,17 @@ li button.delete {
   text-align: right; /* optional */
 }
 
+#clear-completed {
+  background-color: var(--delete-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#clear-completed:hover {
+  background-color: #e05555;
+}
