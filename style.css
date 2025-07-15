@@ -159,8 +159,11 @@ li button.delete {
 .credit-badge {
   position: fixed;
   bottom: 10px;
-  width: 100%;
-  text-align: center;
+  right: 10px;
   font-size: 0.85em;
   color: #999;
+  background-color: rgba(255, 255, 255, 0.7); /optional pastel backdrop /
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
 }
