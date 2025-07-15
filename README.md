@@ -27,7 +27,7 @@ A clean, responsive to-do list web app that helps you stay organized with ease. 
 | `README.md`  | You’re reading it!                                     |
 
 ## 🚀 Live Demo
-[[Click here to try it](https://your-netlify-link.netlify.app/)]
+[[Click here to try it](https://ta-dalist.netlify.app/)]
 
 ## 🚀 How to Run Locally
 
