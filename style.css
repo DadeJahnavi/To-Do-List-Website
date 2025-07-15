@@ -1,0 +1,158 @@
+:root {
+  --bg-color: #f1f1f1;
+  --text-color: #222;
+  --card-bg: #ffffff;
+  --accent-color: #4ADEDE;
+  --delete-color: #FF6B6B;
+  --complete-color: #7ED957;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+#mode-toggle {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--accent-color);
+  color: #000;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+#todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters button {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.filters button.active {
+  background-color: var(--accent-color);
+}
+
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  color: #000;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+  background-color: var(--complete-color);
+}
+
+li button.delete {
+  background-color: var(--delete-color);
+  color: white;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  #todo-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  #todo-input,
+  #todo-form button {
+    width: 100%;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  #mode-toggle {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  li div {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
