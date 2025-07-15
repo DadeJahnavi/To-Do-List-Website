@@ -98,19 +98,15 @@ function reorderTasks(from, to) {
 renderTasks(currentFilter);
 const modeToggle = document.getElementById("mode-toggle");
 
-modeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
-  const isDark = document.body.classList.contains("dark");
-  modeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
-
-// Load theme from localStorage
+// Load theme from localStorage on page load
 if (localStorage.getItem("darkMode") === "true") {
   document.body.classList.add("dark");
   modeToggle.textContent = "☀️ Light Mode";
+} else {
+  modeToggle.textContent = "🌙 Dark Mode";
 }
 
+// Toggle dark mode on click
 modeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   const isDark = document.body.classList.contains("dark");
